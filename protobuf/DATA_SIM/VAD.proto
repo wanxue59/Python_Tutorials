@@ -1,0 +1,14 @@
+syntax = "proto3";    //protobuf的编译器版本，意为使用哪个版本的语法
+//package = AISAFE_DATA_INTERFACE;
+
+message VAD_OUTPUT {    //定义一个名为AddressBook的消息类型
+    string uid = 1;
+    int32 iNO = 2;
+    string strTime = 3;
+    int32 iChannel = 4;
+    bytes byData = 5;
+    float fSNR = 6;
+    float fDur = 7;
+    string Unit = 8;
+    string md5 = 9;
+}

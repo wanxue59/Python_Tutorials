@@ -1,0 +1,28 @@
+syntax = "proto3";    //protobuf的编译器版本，意为使用哪个版本的语法
+package tutorial;    //定义包名
+
+message AddressBook {    //定义一个名为AddressBook的消息类型
+    repeated Person people = 1;    //repeated：该字段可以重复任意次数，包括0次。people可看作是类Person的一个实例对象
+}
+
+message Person {    //定义一个名为Person的消息类型
+    string name = 1;
+    int32 id = 2;
+    string email = 3;
+    float money = 4;
+    bool work_status = 5;
+
+    repeated PhoneNumber phones = 6;
+    
+}
+
+message PhoneNumber{
+    string number = 1;
+    PhoneType type = 2;
+}
+
+enum PhoneType{
+    MOBILE = 0;
+    HOME = 1;
+    WORK = 2;
+}

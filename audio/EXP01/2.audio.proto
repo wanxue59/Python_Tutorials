@@ -1,0 +1,5 @@
+syntax = "proto3";    //protobuf的编译器版本，意为使用哪个版本的语法
+
+message Audio{    //定义一个名为AddressBook的消息类型
+    bytes data = 1;
+}
